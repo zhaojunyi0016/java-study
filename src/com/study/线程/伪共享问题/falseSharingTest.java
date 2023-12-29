@@ -1,7 +1,5 @@
 package com.study.线程.伪共享问题;
 
-import sun.misc.Contended;
-
 /**
  * @Author : Williams
  * Date : 2023/12/29 17:01
@@ -40,5 +38,7 @@ public class falseSharingTest {
         // 加了 volatile 性能下降非常明显
         System.out.println(System.currentTimeMillis() - start);
     }
+
+
 
 }

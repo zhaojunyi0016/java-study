@@ -18,7 +18,7 @@ public class VisibilityTest {
         System.out.println(Thread.currentThread().getName() + "开始执行....");
         while (flag) {
             count++;
-            // 调用 System.out.println() 可以跳出, 是因为底层使用了 synchronized 关键字, 底层调用了内存屏障
+            // 调用 System.out.println() 可以跳出, 是因为底层使用了 synchronized 关键字,  底层调用了内存屏障
             // volatile 加在 count 上也能跳出, 是因为缓存行
             // Thread.yeild() 能跳出是因为释放时间片，重新加载上下文
             // LockSupport.unpark(Thread.currentThread());  也可以跳出循环 底层调用了内存屏障
