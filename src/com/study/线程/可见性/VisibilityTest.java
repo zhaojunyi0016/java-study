@@ -23,7 +23,7 @@ public class VisibilityTest {
             // volatile 加在 count 上也能跳出, 是因为缓存行
             // Thread.yeild() 能跳出是因为释放时间片，重新加载上下文
             // LockSupport.unpark(Thread.currentThread());  也可以跳出循环 底层调用了内存屏障
-            // 或者休眠一下, 让工作内存被淘汰了也能重新读取新的值
+            // 或者休眠一下, 让工作内存被淘汰了也能重新读取新的值,  但是不一定会淘汰, 不是 100% 出现
             // count 换成 Integer 也能跳出,  因为拆包的时候 new 了一个 int value,  vlaue 是 final 修饰的
         }
         System.out.println("跳出循环 count =" + count);
