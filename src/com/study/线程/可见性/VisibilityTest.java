@@ -16,6 +16,7 @@ public class VisibilityTest {
 
     public void load() {
         System.out.println(Thread.currentThread().getName() + "开始执行....");
+        // while循环的优先级非常高, 因为里面是空的, 不需要执行其他指令, 执行时间很短
         while (flag) {
             count++;
             // 调用 System.out.println() 可以跳出, 是因为底层使用了 synchronized 关键字,  底层调用了内存屏障
