@@ -18,7 +18,7 @@ public class Main {
 
     private static void allo() {
         User user = new User();
-        user.setId(1L);
+        user.setId(1);
         user.setName("zjy");
     }
 

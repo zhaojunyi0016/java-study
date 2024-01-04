@@ -6,14 +6,24 @@ package com.study.jvm.逃逸分析;
  */
 
 public class User {
-    private Long id;
+    private Integer id;
     private String name;
 
-    public Long getId() {
+
+    public User() {
+
+    }
+
+    public User(int id, String toString) {
+        this.id = id;
+        this.name = toString;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -23,5 +33,10 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("执行 finalize 方法, 对象回收 userId =" + id);
     }
 }
