@@ -6,10 +6,21 @@ package com.study.jvm.逃逸分析;
  */
 public class Main {
     public static void main(String[] args) {
-        //-Xmx10m -Xms10m -XX:+PrintGC -XX:-DoEscapeAnalysis
-        while (true) {
-            Integer integer = new Integer(1111111111);
+        //-Xmx10m -Xms10m -XX:+PrintGC -XX:-DoEscapeAnalysis  会频繁 GC
+        //-Xmx10m -Xms10m -XX:+PrintGC -XX:+DoEscapeAnalysis  不会 GC
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 1000000000; i++) {
+            allo();
         }
-        //关闭逃逸分析后会频繁发生 full gc
+        long end = System.currentTimeMillis();
+        System.out.println("消耗时间:"+ (end - start));
     }
+
+    private static void allo() {
+        User user = new User();
+        user.setId(1L);
+        user.setName("zjy");
+    }
+
+
 }
