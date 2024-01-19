@@ -15,6 +15,7 @@ public class getThread {
         ThreadInfo[] threadInfos = threadMXBean.dumpAllThreads(false, false);
         for ( ThreadInfo t :threadInfos){
             System.out.println(t);
+            // 遍历打印所有线程
         }
     }
 }
