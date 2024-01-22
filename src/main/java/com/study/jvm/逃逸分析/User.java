@@ -35,6 +35,10 @@ public class User {
         this.name = name;
     }
 
+    /**
+     * 测试 finalize 方法
+     * @throws Throwable
+     */
     @Override
     protected void finalize() throws Throwable {
         System.out.println("执行 finalize 方法, 对象回收 userId =" + id);
