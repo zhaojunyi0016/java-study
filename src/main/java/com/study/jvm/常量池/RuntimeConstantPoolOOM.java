@@ -18,7 +18,7 @@ public class RuntimeConstantPoolOOM {
             list.add(str);
         }
     }
-    //运行结果：
-    //16 jdk7及以上：Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
-    //17 jdk6：Exception in thread "main" java.lang.OutOfMemoryError: PermGen space
+    // 运行结果：
+    // 16 jdk7及以上：Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+    // 17 jdk6：Exception in thread "main" java.lang.OutOfMemoryError: PermGen space
 }
