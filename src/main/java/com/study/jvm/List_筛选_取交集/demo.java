@@ -36,11 +36,8 @@ public class demo {
         phones2.add("4");
         customers.removeIf(customer -> phones.stream().anyMatch(phone -> phone.equals(customer.getPhone())));
         System.out.println(customers);
-
         customers = customers.stream().filter(c -> phones2.stream().anyMatch(h -> h.equals(c.getPhone()))).collect(Collectors.toList());
-
         System.out.println(customers);
-
 
     }
 
