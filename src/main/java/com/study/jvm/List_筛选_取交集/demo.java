@@ -32,7 +32,6 @@ public class demo {
 
 
         List<String> phones2 = new ArrayList<>();
-        phones2.add("0");
         phones2.add("4");
         customers.removeIf(customer -> phones.stream().anyMatch(phone -> phone.equals(customer.getPhone())));
         System.out.println(customers);
