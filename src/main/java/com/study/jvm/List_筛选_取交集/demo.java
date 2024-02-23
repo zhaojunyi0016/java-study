@@ -28,7 +28,6 @@ public class demo {
         List<String> phones = new ArrayList<>();
         phones.add("1");
         phones.add("2");
-        phones.add("3");
 
 
         List<String> phones2 = new ArrayList<>();
