@@ -11,7 +11,7 @@ public class User {
 
 
     public User() {
-
+        System.out.println("初始化...");
     }
 
     public User(int id, String toString) {
